@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Inicio</h1>
       <Link to="/series">
         <div>
           <h2>Ir a la página de Series</h2>

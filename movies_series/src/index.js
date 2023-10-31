@@ -8,12 +8,9 @@ import { Footer } from './components/Footer/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    
-    <Header />
-    <body>
+  <React.StrictMode> 
+    <Header /> 
       <App />
-    </body>
     <Footer />
   </React.StrictMode>
 );
