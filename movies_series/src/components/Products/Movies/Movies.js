@@ -9,7 +9,7 @@ const Movies = () => {
     // Obtiene datos del archivo que simula una base datos en lugar de hacer una solicitud HTTP
     const data = getMovies();
 
-    // Filtra, ordena y obtén los primeros 20 resultados
+    // Filtra, ordena y obtiene los primeros 20 resultados
     const filteredData = data
       .filter(item => item.releaseYear >= 2010 && item.programType === 'movie')
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -20,9 +20,12 @@ const Movies = () => {
 
   return (
     <React.Fragment>
+      {/* Este div debería ser parte del componente "Header" y cambiar su nombre con el estado */}
       <div className='Container-title'>
         <h3 className='Title'>Popular Movies</h3>
       </div>
+
+      {/* Este div debería ser un componente "MoviesList" que traiga películas, series */}
       <div className="grid-container">
         {moviesData.map(item => (
           <div key={item.title} className="grid-item">
