@@ -1,27 +1,22 @@
 import React from 'react';
 import 'devextreme/dist/css/dx.light.css';
-import Button from 'devextreme-react/button';
 import { Home } from './Home/Home';
 import { Movies } from './Movies/Movies';
 import { Series } from './Series/Series';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-class App extends React.Component {
-    render() {
-        return (
-          <>
-            <Button
-              text="Click me"
-              onClick={this.sayHelloWorld} />
-            <Home />
-            <Movies />
-            <Series />
-          </>
-        );
-    }
- 
-    sayHelloWorld() {
-        alert('Hello world!')
-    }
+function App() {
+  return (
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/series" element={<Series />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
  
 export default App;
