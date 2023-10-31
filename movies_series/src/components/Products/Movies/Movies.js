@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { getMovies } from '../../services/database';
+import React, {  useState, useEffect } from 'react';
+import { getMovies } from '../../../services/database';
+import '../../Products/Products.css';
 
 const Movies = () => {
   const [moviesData, setMoviesData] = useState([]);
@@ -9,7 +10,7 @@ const Movies = () => {
   };
 
   useEffect(() => {
-    // Obtén los datos de la base de datos en lugar de hacer una solicitud HTTP
+    // Obtiene datos del archivo que simula una base datos en lugar de hacer una solicitud HTTP
     const data = getMovies();
 
     // Filtra, ordena y obtén los primeros 20 resultados
@@ -24,17 +25,16 @@ const Movies = () => {
   return (
     <React.Fragment>
       <button onClick={handleClick}>Volver</button>
-      <div>
+      <div className="grid-container">
         {moviesData.map(item => (
-          <div key={item.title} className="result-box">
+          <div key={item.title} className="grid-item">
             <img src={item.images['Poster Art'].url} alt={item.title} />
-            <h3>{item.title}</h3>
+            <p>{item.title}</p>
           </div>
         ))}
       </div>
     </React.Fragment>
   );
 };
-
 
 export { Movies };

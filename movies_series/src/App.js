@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './components/Home/Home';
-import { Series } from './components/Series/Series';
-import { Movies } from './components/Movies/Movies';
+import { Series } from './components/Products/Series/Series';
+import { Movies } from './components/Products/Movies/Movies';
 
 function App() {
   return (
