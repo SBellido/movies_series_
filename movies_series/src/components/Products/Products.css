@@ -1,10 +1,17 @@
 @media screen and (min-width: 0px) {
-  div.ContainerTitle {
+  div.Container-title {
     background-color: #414141;
+    width: auto;
+    height: 40px;
+    position: relative;
+    z-index: -1;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
   }
   h3.Title {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -19,25 +26,23 @@
     flex-direction: row;
   }
   img {
-    height: 150px;
+    max-height: 222px;
     width: auto;
+    border: .3px solid gray;
   }
-  .ConteinarTitleProduct {
+  .Conteinar-title--product {
     min-height: 100px;
   }
   p {
     text-align: center;
   }
   .grid-container {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; 
-    margin: 0 auto; 
-    padding: 0 2rem; 
+    gap: 7px;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    max-width: max-content;
   }
   .grid-item {
     width: auto;
@@ -47,28 +52,61 @@
     flex-direction: column;
   }
 
-  .grid-item img {
+  /* .grid-item img {
     max-width: 150px;
-  }
+  } */
 }
 
 @media screen and (min-width: 425px) {
-  div.ContainerTitle {
-    padding: .5rem 10rem;
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div.Container-title {
+    display: flex;
+    align-items: center;
+    padding: 0rem 3.7rem;
   }
   h3.Title {
     text-align: left;
   }
   .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 700px; 
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  div.Container-title {
+    padding: 0rem 6.2rem;
+  }
+  h3.Title {
+    font-size: 1.2rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1440px) {
+  div.Container-title {
+    padding: .5rem 19.5rem;
+  }
+  h3.Title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  div.Container-title {
+    padding: .5rem 22.5rem;
+  }
+}
+@media screen and (min-width: 1700px) {
+  div.Container-title {
+    padding: .5rem 17rem;
+  }
   .grid-container {
-    grid-template-columns: repeat(5, 1fr);
-    max-width: 750px; 
+    grid-template-columns: repeat(7, 1fr);
   }
 }
 

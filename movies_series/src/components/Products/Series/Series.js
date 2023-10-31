@@ -5,10 +5,6 @@ import '../../Products/Products.css';
 const Series = () => {
   const [seriesData, setSeriesData] = useState([]);
 
-  const handleClick = () => {
-    window.history.go(-1);
-  };
-
   useEffect(() => {
     // Obtiene datos del archivo que simula una base datos en lugar de hacer una solicitud HTTP
     const data = getSeries();
@@ -24,12 +20,14 @@ const Series = () => {
 
   return (
     <React.Fragment>
-      <button onClick={handleClick}>Volver</button>
+     <div className='Container-title'>
+        <h3 className='Title'>Popular Series</h3>
+      </div>
       <div className="grid-container">
         {seriesData.map(item => (
           <div key={item.title} className="grid-item">
             <img src={item.images['Poster Art'].url} alt={item.title} />
-            <div className='ConteinarTitleProduct'>
+            <div className='Conteinar-title--product'>
               <p>{item.title}</p>
             </div>
           </div>

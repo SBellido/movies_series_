@@ -5,10 +5,6 @@ import '../../Products/Products.css';
 const Movies = () => {
   const [moviesData, setMoviesData] = useState([]);
 
-  const handleClick = () => {
-    window.history.go(-1);
-  };
-
   useEffect(() => {
     // Obtiene datos del archivo que simula una base datos en lugar de hacer una solicitud HTTP
     const data = getMovies();
@@ -24,15 +20,14 @@ const Movies = () => {
 
   return (
     <React.Fragment>
-      <div className='ContainerTitle'>
-        <h3 className='Title'>Popular titles</h3>
+      <div className='Container-title'>
+        <h3 className='Title'>Popular Movies</h3>
       </div>
-      <button onClick={handleClick}>Volver</button>
       <div className="grid-container">
         {moviesData.map(item => (
           <div key={item.title} className="grid-item">
             <img src={item.images['Poster Art'].url} alt={item.title} />
-            <div className='ConteinarTitleProduct'>
+            <div className='Conteinar-title--product'>
               <p>{item.title}</p>
             </div>
           </div>
