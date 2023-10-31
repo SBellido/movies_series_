@@ -9,7 +9,9 @@ function Series() {
   return (
     <div>
       <h1>Series</h1>
-      <button onClick={handleClick}>Volver</button>
+      <button onClick={handleClick}>
+        Volver
+      </button>
     </div>
   );
 }
