@@ -26,9 +26,9 @@ const Series = () => {
       <div className="grid-container">
         {seriesData.map(item => (
           <div key={item.title} className="grid-item">
-            <img src={item.images['Poster Art'].url} alt={item.title} />
+            <img className="image-product" src={item.images['Poster Art'].url} alt={item.title} />
             <div className='Conteinar-title--product'>
-              <p>{item.title}</p>
+              <span>{item.title}</span>
             </div>
           </div>
         ))}
