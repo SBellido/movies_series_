@@ -1,11 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Movies() {
+  const handleClick = () => {
+    window.history.go(-1);
+  };
+
   return (
-    <React.Fragment>
+    <div>
       <h1>Movies</h1>
-    </React.Fragment>
+      <button onClick={handleClick}>Volver</button>
+    </div>
   );
 }
+
 
 export { Movies };

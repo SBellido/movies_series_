@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Series() {
+  const handleClick = () => {
+    window.history.go(-1);
+  };
+
   return (
-    <React.Fragment>
+    <div>
       <h1>Series</h1>
-    </React.Fragment>
+      <button onClick={handleClick}>Volver</button>
+    </div>
   );
 }
 
