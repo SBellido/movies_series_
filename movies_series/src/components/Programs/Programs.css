@@ -50,10 +50,10 @@
   .Grid-item:hover {
     cursor: pointer;
   }
-  .Grid-item:hover .image-product {
+  .Grid-item:hover .Image-product {
     border: .3px solid white;
     opacity: .5;
-    transition: border .3s, opacity .3s;
+    border: solid .3s, white;
   }
   .Grid-item:hover span {
     font-weight: 600;
