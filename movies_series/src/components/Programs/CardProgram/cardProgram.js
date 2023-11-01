@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
 
 function CardProgram(props) {
-  const [modalAbierto, setModalAbierto] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const abrirModal = () => {
-    setModalAbierto(true);
+  const openModal = () => {
+    setModalOpen(true);
   };
 
-  const cerrarModal = () => {
-    setModalAbierto(false);
+  const closeModal = () => {
+    setModalLOpen(false);
   };
 
   return (
-    <div className="card">
+    <div className="Card">
       <img src={props.image.url} alt={props.title} />
       <h2>{props.title}</h2>
       <p>{props.description}</p>
       <p>{props.releaseYear}</p>
-      <button onClick={abrirModal}>Abrir Modal</button>
 
       {modalAbierto && (
-        <div className="modal">
-          <div className="modal-contenido">
-            <span className="cerrar-modal" onClick={cerrarModal}>
+        <div className="Modal">
+          <div className="Modal-container">
+            <span className="Close-modal" onClick={closeModal}>
               X
             </span>
             <h3>{props.title}</h3>
@@ -35,4 +34,4 @@ function CardProgram(props) {
   );
 }
 
-export default CardProgram;
+export { CardProgram };

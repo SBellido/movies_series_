@@ -23,11 +23,11 @@ const SeriesList = () => {
      <div className='Container-title'>
         <h3 className='Title'>Popular Series</h3>
       </div>
-      <div className="grid-container">
+      <div className="Grid-container">
         {seriesData.map(item => (
-          <div key={item.title} className="grid-item">
-            <img className="image-product" src={item.images['Poster Art'].url} alt={item.title} />
-            <div className='Conteinar-title--product'>
+          <div key={item.title} className="Grid-item">
+            <img className="Image-product" src={item.images['Poster Art'].url} alt={item.title} />
+            <div className='Containar-title--product'>
               <span>{item.title}</span>
             </div>
           </div>
