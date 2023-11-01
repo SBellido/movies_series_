@@ -1,0 +1,94 @@
+
+@media screen and (min-width: 0px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    background: linear-gradient(
+      to bottom,  
+      #0097ff 0%,
+      #006fff 100%
+    ); 
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+  }
+  div.Container-element--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;  
+  }
+  h1.Title {
+    color: white;
+    font-size: 1.5rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 1px 2px #001bc899;
+  }
+  .Login {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .Start {
+    width: 150px;
+    background-color: #414141;
+  }
+  .Button {
+    border: none;
+    color: white;
+    height: 30px;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div.Container-element--header {
+    padding: 0rem 3.7rem;
+  }
+  h1.Title {
+    text-align: left;
+  }
+  .coontainer-buttons {
+    width: 220px;
+    display: inherit;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  div.Container-element--header {
+    padding: 0rem 6.2rem;
+  }
+  h1.Title {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  div.Container-element--header {
+    padding: .5rem 19.5rem;
+  }
+  h1.Title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  div.Container-element--header {
+    padding: .5rem 22rem;
+  }
+}
+@media screen and (min-width: 1700px) {
+  div.Container-element--header {
+    padding: .5rem 17rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  div.Container-element--header {
+    padding: .5rem 44rem;
+  }
+}
