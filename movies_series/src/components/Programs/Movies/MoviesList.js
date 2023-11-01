@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getMovies } from '../../../services/database';
+import CloseIcon from '@mui/icons-material/Close';
 import '../Programs.css';
 
 const MoviesList = () => {
@@ -37,7 +38,7 @@ const MoviesList = () => {
         {moviesData.map(item => (
           <div key={item.title} className="Grid-item" 
             onClick={() => openModal(item)}>
-            <img src={item.images['Poster Art'].url} alt={item.title} />
+            <img className="Image-product" src={item.images['Poster Art'].url} alt={item.title} />
             <div className='Containar-title--product'>
               <p>{item.title}</p>
             </div>
@@ -48,15 +49,23 @@ const MoviesList = () => {
       {modalOpen && movieSelected && (
         <div className="Modal">
           <div className="Modal-container">
-            <div className="Container-close--modal">
-              <span className="Close-modal" onClick={closeModal}>X</span>
-            </div>
-            <img src={movieSelected.images['Poster Art'].url} 
-              className='Img-movie'
+            <img className="Image-modal"
+              src={movieSelected.images['Poster Art'].url} 
               alt={movieSelected.title} />
-            <h3>{movieSelected.title}</h3>
-            <p>{movieSelected.description}</p>
-            <p>{movieSelected.releaseYear}</p>
+            <div className='Contenier-info--modal'>
+              <div className="Container-close--modal">
+                <CloseIcon 
+                  className="Close-modal" onClick={closeModal}
+                  data-testid="DeleteIcon">
+                </CloseIcon >
+              </div>
+              <div className='Container-text--modal'>
+                <h3 className='Title-modal'>{movieSelected.title}</h3>
+                <span>Año: {movieSelected.releaseYear}</span>
+                <p className='Sinapsis'><span>Sinapsis:</span></p> 
+                <p>{movieSelected.description}</p>
+              </div>
+            </div>
           </div>
         </div>
       )}
