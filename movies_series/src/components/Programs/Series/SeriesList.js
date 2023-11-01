@@ -1,8 +1,8 @@
 import React, {  useState, useEffect } from 'react';
 import { getSeries } from '../../../services/database';
-import '../../Products/Products.css';
+import '../Programs.css';
 
-const Series = () => {
+const SeriesList = () => {
   const [seriesData, setSeriesData] = useState([]);
 
   useEffect(() => {
@@ -37,5 +37,4 @@ const Series = () => {
   );
 };
 
-
-export { Series };
+export { SeriesList };

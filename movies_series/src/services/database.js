@@ -1,4 +1,3 @@
-import React from 'react';
 
 const database = {
   "total": 75,

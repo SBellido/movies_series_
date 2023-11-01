@@ -1,14 +1,13 @@
 import React, {  useState, useEffect } from 'react';
 import { getMovies } from '../../../services/database';
-import '../../Products/Products.css';
+import '../Programs.css';
 
-const Movies = () => {
+const MoviesList = () => {
+
   const [moviesData, setMoviesData] = useState([]);
-
   useEffect(() => {
     // Obtiene datos del archivo que simula una base datos en lugar de hacer una solicitud HTTP
     const data = getMovies();
-
     // Filtra, ordena y obtiene los primeros 20 resultados
     const filteredData = data
       .filter(item => item.releaseYear >= 2010 && item.programType === 'movie')
@@ -40,4 +39,4 @@ const Movies = () => {
   );
 };
 
-export { Movies };
+export { MoviesList };
