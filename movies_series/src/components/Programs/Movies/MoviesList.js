@@ -46,8 +46,8 @@ const MoviesList = () => {
         ))}
       </div>
 
-      {modalOpen && movieSelected && (
-        <div className="Modal">
+      {modalOpen && movieSelected && (  
+        <div className="Background">
           <div className="Modal-container">
             <img className="Image-modal"
               src={movieSelected.images['Poster Art'].url} 
@@ -56,7 +56,8 @@ const MoviesList = () => {
               <div className="Container-close--modal">
                 <CloseIcon 
                   className="Close-modal" onClick={closeModal}
-                  data-testid="DeleteIcon">
+                  data-testid="DeleteIcon"
+                  title="Cerrar">
                 </CloseIcon >
               </div>
               <div className='Container-text--modal'>

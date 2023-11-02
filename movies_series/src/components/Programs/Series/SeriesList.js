@@ -56,25 +56,28 @@ const SeriesList = () => {
       </div>
 
       {modalOpen && serieSelected && (
-        <div className="Modal">
+        <div>
+        <div className="Background"> 
+        </div>
           <div className="Modal-container">
-            <img className="Image-modal"
-              src={serieSelected.images['Poster Art'].url} 
-              alt={serieSelected.title} />
-            <div className='Contenier-info--modal'>
-              <div className="Container-close--modal">
-                <CloseIcon 
-                  className="Close-modal" onClick={closeModal}
-                  data-testid="DeleteIcon">
-                </CloseIcon >
+              <img className="Image-modal"
+                src={serieSelected.images['Poster Art'].url} 
+                alt={serieSelected.title} />
+              <div className='Contenier-info--modal'>
+                <div className="Container-close--modal">
+                  <CloseIcon 
+                    className="Close-modal" onClick={closeModal}
+                    data-testid="DeleteIcon"
+                    title="Cerrar">
+                  </CloseIcon >
+                </div>
+                <div className='Container-text--modal'>
+                  <h3 className='Title-modal'>{serieSelected.title}</h3>
+                  <span>Año: {serieSelected.releaseYear}</span>
+                  <p className='Sinapsis'><span>Sinapsis:</span></p> 
+                  <p>{serieSelected.description}</p>
+                </div>
               </div>
-              <div className='Container-text--modal'>
-                <h3 className='Title-modal'>{serieSelected.title}</h3>
-                <span>Año: {serieSelected.releaseYear}</span>
-                <p className='Sinapsis'><span>Sinapsis:</span></p> 
-                <p>{serieSelected.description}</p>
-              </div>
-            </div>
           </div>
         </div>
       )}
